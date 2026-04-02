@@ -1,0 +1,99 @@
+/* ── HERO ── */
+.hero {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(135deg, #0a3d2e 0%, #1a6b4a 40%, #2d8a5e 70%, #c8860a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");
+}
+
+.hero-badge {
+  background: rgba(200, 134, 10, 0.25);
+  border: 0.5px solid rgba(200, 134, 10, 0.6);
+  color: #f5c842;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.hero h1 span {
+  color: #f5c842;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  margin-top: 12px;
+  font-weight: 300;
+  position: relative;
+}
+
+/* ── SEARCH BAR (อยู่ใน Hero) ── */
+.search-bar {
+  margin-top: 28px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 460px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 13px 16px;
+  border-radius: 8px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar button {
+  padding: 13px 22px;
+  background: #c8860a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-bar button:hover {
+  background: #a06808;
+}

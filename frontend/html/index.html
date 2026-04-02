@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ค้นพบไทยแลนด์ - Thailand Travel Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!--เรียกใช้ CSS -->
+  <link rel="stylesheet" href="../css/base.css"/>
+  <link rel="stylesheet" href="../css/hero.css"/>
+  <link rel="stylesheet" href="../css/nav.css"/>
+  <link rel="stylesheet" href="../css/highlights.css"/>
+  <link rel="stylesheet" href="../css/places.css"/>
+  <link rel="stylesheet" href="../css/map.css"/>
+  <link rel="stylesheet" href="../css/tipbanner.css"/>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Thailand Travel Guide</div>
+    <h1>ค้นพบ<span>ไทยแลนด์</span></h1>
+    <p>ดินแดนแห่งรอยยิ้ม วัฒนธรรม และธรรมชาติอันงดงาม</p>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="ค้นหาสถานที่... เช่น เชียงใหม่, ภูเก็ต"/>
+      <button onclick="doSearch()">ค้นหา</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- FILTER NAV -->
+    <div class="nav" id="navBar">
+      <button class="active" onclick="filterCards('all', this)">ทั้งหมด</button>
+      <button onclick="filterCards('north', this)">ภาคเหนือ</button>
+      <button onclick="filterCards('central', this)">ภาคกลาง</button>
+      <button onclick="filterCards('south', this)">ภาคใต้</button>
+      <button onclick="filterCards('east', this)">ภาคตะวันออก</button>
+      <button onclick="filterCards('northeast', this)">ภาคอีสาน</button>
+    </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="highlights">
+      <div class="hi-card">
+        <div class="hi-icon">🏛️</div>
+        <div class="hi-label">วัดวาอาราม</div>
+        <div class="hi-val">40,000+</div>
+      </div>
+      <div class="hi-card">
+        <div class="hi-icon">🏖️</div>
+        <div class="hi-label">ชายหาด</div>
+        <div class="hi-val">3,000 กม.</div>
+      </div>
+      <div class="hi-card">
+        <div class="hi-icon">🌿</div>
+        <div class="hi-label">อุทยานแห่งชาติ</div>
+        <div class="hi-val">157 แห่ง</div>
+      </div>
+      <div class="hi-card">
+        <div class="hi-icon">🍜</div>
+        <div class="hi-label">อาหารขึ้นชื่อ</div>
+        <div class="hi-val">ระดับโลก</div>
+      </div>
+    </div>
+
+    <!-- PLACES -->
+    <div class="section-title">สถานที่แนะนำ</div>
+    <div class="section-sub" id="filterLabel">แสดงทุกสถานที่ · 10 แห่ง</div>
+    <div class="grid" id="cardGrid"></div>
+
+    <!-- MAP -->
+    <div class="map-section">
+      <div class="map-visual">🗺️</div>
+      <div class="map-info">
+        <h3>ภูมิภาคของไทย</h3>
+        <div class="region-list">
+          <div class="region-item">
+            <div class="region-dot" style="background:#1a6b4a;"></div>
+            <span>ภาคเหนือ — เชียงใหม่, แม่ฮ่องสอน, ลำปาง</span>
+          </div>
+          <div class="region-item">
+            <div class="region-dot" style="background:#c8860a;"></div>
+            <span>ภาคกลาง — กรุงเทพฯ, อยุธยา, กาญจนบุรี</span>
+          </div>
+          <div class="region-item">
+            <div class="region-dot" style="background:#1a5b8a;"></div>
+            <span>ภาคใต้ — ภูเก็ต, เกาะสมุย, กระบี่</span>
+          </div>
+          <div class="region-item">
+            <div class="region-dot" style="background:#8a3a1a;"></div>
+            <span>ภาคตะวันออก — พัทยา, เกาะช้าง</span>
+          </div>
+          <div class="region-item">
+            <div class="region-dot" style="background:#5a3a8a;"></div>
+            <span>ภาคอีสาน — ขอนแก่น, โคราช, เลย</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIP BANNER -->
+    <div class="tip-banner">
+      <div>
+        <h3>เคล็ดลับการท่องเที่ยว</h3>
+        <p>ช่วงเวลาที่ดีที่สุด: พฤศจิกายน – กุมภาพันธ์ อากาศเย็นสบายทั่วประเทศ</p>
+      </div>
+      <button class="tip-btn">ดูเพิ่มเติม →</button>
+    </div>
+
+  </div>
+
+  <footer>© 2026 Thailand Travel Guide · สร้างด้วย HTML + CSS + JS</footer>
+
+  <!-- JS แต่ละ section -->
+  <script src="../js/data.js"></script>
+  <script src="../js/hero.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/highlights.js"></script>
+  <script src="../js/places.js"></script>
+  <script src="../js/map.js"></script>
+  <script src="../js/tipbanner.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ── HIGHLIGHTS ── */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 640px) {
+  .highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hi-card {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.hi-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.hi-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.hi-val {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0a3d2e;
+}
